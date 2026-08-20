@@ -6,9 +6,9 @@ import urllib.request
 from datetime import datetime
 from html.parser import HTMLParser
 
-WP_API_URL = "https://morningvibes9.com/wp-json/wp/v2/posts?per_page=12&_embed"
+WP_API_URL = "https://morningvibes9.com/wp-json/wp/v2/posts?per_page=15&_embed"
+ADSENSE_CLIENT_ID = "ca-pub-4061659060734954"
 
-# Always use the root repository directory
 BASE_DIR = os.getcwd()
 STORIES_DIR = os.path.join(BASE_DIR, "stories")
 INDEX_PATH = os.path.join(BASE_DIR, "index.html")
@@ -192,6 +192,7 @@ def generate_story_html(story):
   <!-- AMP Scripts -->
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+  <script async custom-element="amp-story-auto-ads" src="https://cdn.ampproject.org/v0/amp-story-auto-ads-0.1.js"></script>
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
   <!-- Google Discover SEO Schema -->
@@ -290,6 +291,19 @@ def generate_story_html(story):
     publisher="Morning Vibes 9"
     publisher-logo-src="https://morningvibes9.com/wp-content/uploads/2025/08/Logo@450x200-1-e1758982931221.png"
     poster-portrait-src="{story['image']}">
+
+    <!-- Google AdSense Web Story Auto-Ads -->
+    <amp-story-auto-ads>
+      <script type="application/json">
+      {{
+        "ad-attributes": {{
+          "type": "adsense",
+          "data-ad-client": "{ADSENSE_CLIENT_ID}"
+        }}
+      }}
+      </script>
+    </amp-story-auto-ads>
+
     {pages_html}
   </amp-story>
 </body>
