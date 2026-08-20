@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Stories - Morning Vibes 9</title>
+  <meta name="description" content="Visual, immersive Web Stories on trending news, technology, economy, and global events by Morning Vibes 9.">
+  <link rel="canonical" href="https://stories.morningvibes9.com/">
+  <link rel="icon" href="https://morningvibes9.com/wp-content/uploads/2025/09/cropped-Fav_icon-32x32.png" sizes="32x32">
+  <style>
+    :root {
+      --primary: #094fa7;
+      --dark: #0f172a;
+      --card-bg: #ffffff;
+      --bg: #f8fafc;
+      --text: #1e293b;
+      --text-muted: #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo img {
+      max-height: 42px;
+      width: auto;
+      display: block;
+    }
+    .main-site-btn {
+      background: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: opacity 0.2s ease;
+    }
+    .main-site-btn:hover { opacity: 0.9; }
+    .hero {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+    .hero h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .hero p {
+      color: var(--text-muted);
+      font-size: 16px;
+    }
+    .stories-grid {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .story-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+    }
+    .story-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+    .thumbnail-wrapper {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      width: 100%;
+      background: #e2e8f0;
+      overflow: hidden;
+    }
+    .thumbnail-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .story-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(4px);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .story-info {
+      padding: 16px;
+    }
+    .story-info h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+    .story-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+      border-top: 1px solid #e2e8f0;
+      margin-top: 60px;
+      background: #ffffff;
+    }
+    footer a { color: var(--primary); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="https://morningvibes9.com/" class="logo">
+      <img src="https://morningvibes9.com/wp-content/uploads/2025/08/Logo@450x200-1-e1758982931221.png" alt="Morning Vibes 9">
+    </a>
+    <a href="https://morningvibes9.com/" class="main-site-btn">Visit Website →</a>
+  </header>
+
+  <section class="hero">
+    <h1>Visual Web Stories</h1>
+    <p>Tap, swipe, and explore quick stories on trending news and insights.</p>
+  </section>
+
+  <main class="stories-grid">
+    <!-- Story Card 1 -->
+    <a href="/stories/trump-west-asia-speech/" class="story-card">
+      <div class="thumbnail-wrapper">
+        <span class="story-badge">⚡ Story</span>
+        <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=720&q=80" alt="West Asia Tension">
+      </div>
+      <div class="story-info">
+        <h3>West Asia Tension Escalates: Economic Warning Issued</h3>
+        <p class="story-meta">Updated Today • News</p>
+      </div>
+    </a>
+  </main>
+
+  <footer>
+    <p>© 2026 <a href="https://morningvibes9.com/">Morning Vibes 9</a>. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
