@@ -22,7 +22,16 @@ jobs:
           python-version: '3.x'
 
       - name: Run Web Stories Auto-Generator
-        run: python scripts/generate_stories.py
+        run: |
+          if [ -f "scripts/generate_stories.py" ]; then
+            python scripts/generate_stories.py
+          elif [ -f "generate_stories.py" ]; then
+            python generate_stories.py
+          else
+            SCRIPT_PATH=$(find . -name "generate_stories.py" | head -n 1)
+            echo "Found script at: $SCRIPT_PATH"
+            python "$SCRIPT_PATH"
+          fi
 
       - name: Commit and Push New Stories
         run: |
