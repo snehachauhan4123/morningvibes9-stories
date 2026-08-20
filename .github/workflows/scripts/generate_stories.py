@@ -7,7 +7,9 @@ from datetime import datetime
 from html.parser import HTMLParser
 
 WP_API_URL = "https://morningvibes9.com/wp-json/wp/v2/posts?per_page=12&_embed"
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Always use the root repository directory
+BASE_DIR = os.getcwd()
 STORIES_DIR = os.path.join(BASE_DIR, "stories")
 INDEX_PATH = os.path.join(BASE_DIR, "index.html")
 SITEMAP_PATH = os.path.join(BASE_DIR, "sitemap.xml")
